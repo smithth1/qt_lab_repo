@@ -32,11 +32,19 @@ class Window(QtWidgets.QWidget):
         self.ui.comboBox.addItems(["Dec", "Hex", "Bin", "Oct"])
         self.ui.dial.setMaximum(31)
         self.ui.horizontalSlider.setMaximum(31)
+        self.load()
+
+    def load(self) -> None:
+        """
+        load settings
+        :return:
+        """
         settings = QSettings("OrgName", "AppName")
         saved_value = settings.value("dialValue", 0)
         self.ui.dial.setValue(int(saved_value))
         saved_value = settings.value("ns", 0)
         self.ui.comboBox.setCurrentIndex(int(saved_value))
+
 
     def initSignals(self) -> None:
         """
