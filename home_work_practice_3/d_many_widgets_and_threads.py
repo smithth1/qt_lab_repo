@@ -83,7 +83,7 @@ class Window(QtWidgets.QWidget):
             return True
 
         except ValueError:
-            self.ui.textEditWeather.setText("Введите корректные координаты")
+            self.ui.textEditWeather.setText("Enter correct coordinate")
             return False
     def weatherinfo(self, data: dict):
         curweather = data['current_weather']
