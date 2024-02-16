@@ -77,7 +77,7 @@ class Window(QtWidgets.QWidget):
         :return:
         """
         if self.ui.comboBox.currentIndex() == 0:
-            self.ui.lcdNumber.setMode(self.ui.lcdNumber.Mode.Dec)
+            self.ui.lcdNumber.setMode (self.ui.lcdNumber.Mode.Dec)
         elif self.ui.comboBox.currentIndex() == 1:
             self.ui.lcdNumber.setMode(self.ui.lcdNumber.Mode.Hex)
         elif self.ui.comboBox.currentIndex() == 2:
